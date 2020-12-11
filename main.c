@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 int menu(); //provides text based interface for the menu. Returns user choice.
-void update_output(char output[], char word[], int LENGTH, char c); //replaces '-' with the appropriate char if the user guessed correctly
 void play_game(); //simulates the game being played
 void options(); //provides a text based interface for the game options
 
@@ -25,15 +24,6 @@ int menu() {
     printf("tapez:\n1 pour jouer\n2 pour accéder au options\n0 pour sortir\n");
     scanf(" %d", &input);
     return input;
-}
-
-void update_output(char output[], char word[], int LENGTH, char c) {
-    int i;
-    for (i = 1; i < LENGTH - 1; i++) {
-        if (word[i] == c) {
-            output[i] == word[i];
-        }
-    }
 }
 
 void play_game() {
